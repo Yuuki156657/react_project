@@ -5,7 +5,6 @@ export default class Header extends React.Component {
     render(){
         return(
             <section id="header" className="header">
-            
             </section>
         )
     }
