@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marketa's Bed and Breakfast</title>
+    <meta charset="UTF-8">
+    <meta name="discription" content="">
+    <meta name="keywords" content="">
+    <meta name="auther" content="Yuuki">
+    <meta name="viewport" content="width=device-width, initial-scales=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+
+<style>
+
+/*============================= Global Settings =============================*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #eaeaea;
+
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+/*============================= Header Section =============================*/
+
+#header{
+    position: fixed;
+    top:0px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #eaeaea;
+    /*overflow: auto;*/
+    /* border-bottom: 1px solid #3F6F7F; */
+}
+
+#links {
+    background-color: #3a3e3e;
+    overflow: hidden;
+    height: 40px;
+}
+
+.social-media.email:hover {
+    font-weight: bold;
+}
+
+.social-media {
+    float: right;
+    padding: 10px 16px;
+    color: white;
+    font-size: 0.9rem;
+    background-color: #3a3e3e;
+
+}
+
+.social-media img {
+    height: 20px;
+    width: 20px;
+    transition: 1s ease-in-out;
+}
+
+#header .logo {
+    height: 110px;
+    margin: 10px;
+    text-align: center
+}
+
+
+/*============================= Wall Pic =============================*/
+
+    .wall-pic {
+        width: 100%;
+        height: 620px;
+        margin-top: 130px;
+        background-color: #eaeaea;
+    }
+
+/*============================= room =============================*/
+
+.gap {
+    background-color: #eaeaea;
+    height: 300px;
+}
+
+div#outer {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 250px;
+        grid-gap: 20px;
+        background-color: #eaeaea;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+    #one, #two, #three, #four, #five, #six, #seven, #eight{
+        height: 20px;
+        margin-top: 200px;
+        /* margin-left: 20px;
+        margin-right: 20px; */
+
+
+    }
+
+    img {
+        width: 300px;
+        height: 200px;
+
+    }
+
+
+/*============================= Footer =============================*/
+
+.footer {
+    color: white;
+
+}
+
+.footer .copyright {
+    font-size: xx-small;
+    float: left;
+    width: 100%;
+    line-height: 40px; 
+    background-color: #3A3E3E;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.footer .uparrow {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    width: 50px;
+    background-color: #3A3E3E;
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.footer .uparrow a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin: auto;
+    line-height: 40px; 
+    background-color: #3A3E3E;
+
+}
+
+.footer .uparrow:hover a {    
+    background-color: #3F6F7F;
+    color: white;
+}
+    
+</style>
+    
+</head>
+
+<body>
+    <div id="header">        
+        <div id="links">
+            <a class="social-media" href="https://app.thebookingbutton.com/properties/marketasbedandbreakfast?check_in_date=20-12-2018&amp;check_out_date=21-12-2018&amp;number_adults=2" target="_blank">Click Here for Online Reservations</a>
+            <a class="social-media" href="https://www.facebook.com/pages/Marketas-Bed-and-Breakfast/176582215723249" class="sh-sb-link" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/facebook.png" alt="Facebook" class="sh-sb-icon" scale="0">
+            </a>
+            <a class="social-media" href="https://twitter.com/MissMarketa" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/twitter.png" alt="Twitter" scale="0">
+            </a>
+            <a class="social-media" href="http://www.tripadvisor.ca/Hotel_Review-g154945-d610296-Reviews-Marketa_s_Bed_and_Breakfast-Victoria_Victoria_Capital_Regional_District_Vancouver_Islan.html" class="sh-sb-link" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/tripadvisor.png" alt="Tripadvisor" scale="0">
+            </a>
+        </div>
+        
+        <!-- <img class="logo responsive" src="https://www.marketas.com/wp-content/uploads/2014/05/logo.png" alt="logo" scale="0"> -->
+    
+        
+        <a href="index.html">
+            <img class="logo" src="https://www.marketas.com/wp-content/uploads/2014/05/logo.png" alt="logo" scale="0">
+        </a>
+    </div>
+
+
+    <div id="outer">
+            <div id="one"><img src="img/room1.jpg" 300px 300px></div>
+            <div id="two"><img src="img/room2.jpg" 300px 300px></div>
+            <div id="three"><img src="img/room3.jpg" 300px 300px></div>
+            <div id="four"><img src="img/room4.jpg" 300px 300px></div>
+            <div id="five"><img src="img/room5.jpg" 300px 300px></div>
+            <div id="six"><img src="img/room6.jpg" 300px 300px></div>
+            <div id="seven"><img src="img/room7.jpg" 300px 300px></div>
+            <div id="eight"><img src="img/room8.jpg" 300px 300px></div>
+        </div>
+
+        <div class="gap"></div>
+
+    <div id="footer" class="footer">
+        <div class="copyright">
+                &copy; 2019, Created by Yuki Nagano.
+            </div>
+        
+        <div class="uparrow">
+            <a href="room.html" title="Go to the top of the Page">&and;</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marketa's Bed and Breakfast</title>
+    <meta charset="UTF-8">
+    <meta name="discription" content="">
+    <meta name="keywords" content="">
+    <meta name="auther" content="Yuuki">
+    <meta name="viewport" content="width=device-width, initial-scales=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    
+    <script type="text/javascript">
+        function toggleMenu() {
+            var myMenu = document.getElementById("top-menu");
+            if (myMenu.className === "nav-menu") {
+                myMenu.className += " dropdown";
+            } else {
+                myMenu.className = "nav-menu";
+            }
+        }
+        
+    </script>
+
+<style>
+
+/*============================= Global Settings =============================*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+/*============================= Header Section =============================*/
+
+#header{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #eaeaea;
+    /*overflow: auto;*/
+    /* border-bottom: 1px solid #3F6F7F; */
+    z-index: 100;
+}
+
+#links {
+    background-color: #3a3e3e;
+    overflow: hidden;
+    height: 40px;
+}
+
+.social-media.email:hover {
+    font-weight: bold;
+}
+
+.social-media {
+    float: right;
+    padding: 10px 16px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.social-media img {
+    height: 20px;
+    transition: 1s ease-in-out;
+}
+
+#header .logo {
+    height: 70px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.nav-menu {
+    float: right;
+    height: 90px;
+    line-height: 90px;
+    padding: 0 20px;
+    overflow: visible;
+}
+
+.nav-menu a {
+    padding: 0 10px;
+    overflow: auto;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-menu a:first-child {
+    display: none;
+    font-size: 2rem;
+}
+
+.nav-menu a:not(:first-child):hover {
+    font-weight: bold;
+    color: #3F6F7F;
+}
+
+
+
+
+/*============================= Slide show =============================*/
+.mySlides {
+            display: none
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 90%;
+            /* height: 100px; */
+            position: relative;
+            margin: auto;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -32px;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            transition: 0.6s ease;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .circle {
+            cursor: pointer;
+            height: 13px;
+            width: 13px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .circle:hover {
+            background-color: #000;
+        }
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0.4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+/*============================= Wall Pic =============================*/
+
+    .wall-pic {
+        width: 100%;
+        height: 620px;
+        margin-top: 130px;
+        background-color: #eaeaea;
+    }
+
+/* ------------------------------- video --------------------------- */
+    #movie,.home  {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .abouttext {
+        color: #000;
+        padding: 25% 0;
+        text-align: center;
+        font-size: 2rem; 
+    }
+
+    #movie:hover {
+        opacity: 0.5;
+    }
+/* ------------------------------- video end --------------------------- */
+
+/*============================= About =============================*/
+
+.About {
+    width: 100%;
+    height: 600px;
+    padding: 30%;
+    background-color: #858889;
+}
+
+/*============================= Contact Us =============================*/
+
+.contact-us {
+    /* margin: 10px 0 0 0; */
+    display: flex;
+    flex-wrap: wrap;    
+    width: 100%;
+    padding: 5% 10%;
+    background-color: #858889;
+    align-content: space-between;
+    
+}
+
+.contact-us .wrapper {    
+    width: 33.3%;
+    color: white;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.contact-us .wrapper h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-us .wrapper li {
+    list-style: none;
+}
+
+.contact-us .wrapper li a {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact-us .wrapper li a:hover {
+    font-weight: bold;
+}
+
+.contact-us .wrapper iframe {
+    width: 100%;
+    height: auto;
+}
+
+
+/*============================= Footer =============================*/
+
+.footer {
+  color: white;
+}
+
+.footer .copyright {
+    font-size: xx-small;
+    float: left;
+    width: 100%;
+    line-height: 40px; 
+    background-color: #3A3E3E;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.footer .uparrow {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    width: 50px;
+    background-color: #3A3E3E;
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.footer .uparrow a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin: auto;
+    line-height: 40px;
+     
+}
+
+.footer .uparrow:hover a {    
+    background-color: #3F6F7F;
+    color: white;
+}
+    
+
+@media screen and (max-width: 785px) {
+
+    .wall-pic {
+        width: 100%;
+        height: 400px;
+        margin-top: 130px;
+        background-color: #eaeaea;
+    }
+
+    .About {
+    width: 100%;
+    height: 400px;
+    padding: 30%;
+    background-color: #858889;
+}
+
+    .nav-menu a:not(:first-child) {
+        display: none;
+    }
+    
+    .nav-menu a:first-child {
+        display: block;
+    }
+    
+    .nav-menu.dropdown {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 200px;
+        line-height: 20px;
+        padding: 0px;
+        overflow: visible;
+        background-color: rgba(31, 98, 124, 0.753);
+    }
+    
+    .nav-menu.dropdown a {
+        display: block;
+        padding: 10px 20px;
+        float: none;
+    }
+    
+    .nav-menu.dropdown a:hover:not(:first-child) {
+        background-color: #64B0C9;
+        color: #000;
+    }
+    
+    .nav-menu.dropdown a:first-child {
+        text-align: right;  
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wall-pic {
+        width: 100%;
+        height: 300px;
+        margin-top: 130px;
+        background-color: #eaeaea;
+    }
+
+    .About {
+    width: 100%;
+    height: 300px;
+    padding: 30%;
+    background-color: #858889;
+}
+}
+
+</style>
+    
+</head>
+
+<body onload="carousel();">
+        <div id="header">        
+        <div id="links">
+            <a class="social-media" href="https://app.thebookingbutton.com/properties/marketasbedandbreakfast?check_in_date=20-12-2018&amp;check_out_date=21-12-2018&amp;number_adults=2" target="_blank">Click Here for Online Reservations</a>
+            <a class="social-media" href="https://www.facebook.com/pages/Marketas-Bed-and-Breakfast/176582215723249" class="sh-sb-link" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/facebook.png" alt="Facebook" class="sh-sb-icon" scale="0">
+            </a>
+            <a class="social-media" href="https://twitter.com/MissMarketa" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/twitter.png" alt="Twitter" scale="0">
+            </a>
+            <a class="social-media" href="http://www.tripadvisor.ca/Hotel_Review-g154945-d610296-Reviews-Marketa_s_Bed_and_Breakfast-Victoria_Victoria_Capital_Regional_District_Vancouver_Islan.html" class="sh-sb-link" target="_blank">
+                <img src="https://www.marketas.com/wp-content/uploads/2014/08/tripadvisor.png" alt="Tripadvisor" scale="0">
+            </a>
+        </div>
+        
+        <img class="logo responsive" src="https://www.marketas.com/wp-content/uploads/2014/05/logo.png" alt="logo" scale="0">
+
+
+
+        <div id="top-menu" class="nav-menu">
+            <a href="javascript:void(0);" class="humburger-bar white" onclick="toggleMenu();">&#9776;</a>
+            <a href="index.html" class="menu-item">Home</a>
+            <!-- <ul class="dropdown">
+                    <li class="home-item">
+                        <a class="menu-item" href=".logo responsive">Top</a>
+                    </li>
+                    <li class="home-item">
+                        <a class="menu-item" href="#">About</a>
+                    </li>
+                    <li class="home-item">
+                            <a class="menu-item" href="#">Victria</a>
+                    </li>
+                    <li class="home-item">
+                            <a class="menu-item" href="#">Histry</a>
+                    </li>
+                                        <li class="home-item">
+                            <a class="menu-item" href="#">Contact Us</a>
+                    </li>
+                </ul> -->
+            <a href="room.html" class="menu-item">Rooms</a>
+            <a href=https://www.marketas.com/breakfast/ class="menu-item" white>Breakfast</a>
+            <a href="https://www.marketas.com/contact/" class="menu-item">Contact</a>
+        </div>        
+    </div>
+
+
+    <div class="wall-pic" id="wall-pic">
+
+<!-- ------------------- Slide show ----------------------- -->
+<div class="slideshow-container"><br>
+
+        <div class="mySlides fade">
+            <!-- <div class="number">1 / 3</div> -->
+            <img src="img/photo1.jpg" width="100%" height="auto">
+            <!-- <div class="text">At a beach</div> -->
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="number">2 / 3</div> -->
+            <img src="img/photo2.jpg" width="100%" height="auto">
+            <!-- <div class="text">Floating at dawn</div> -->
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="number">3 / 3</div> -->
+            <img src="img/photo3.jpg" width="100%" height="auto">
+            <!-- <div class="text">On the way to fish</div> -->
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="circle" onclick="currentSlide(1);"></span>
+        <span class="circle" onclick="currentSlide(2);"></span>
+        <span class="circle" onclick="currentSlide(3);"></span>
+    </div>
+    
+
+    <script>
+        var slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var circle = document.getElementsByClassName("circle");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < circle.length; i++) {
+                circle[i].className = circle[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            circle[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function carousel() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+<!-- ------------------- Slide show end ----------------------- -->
+
+    </div>
+    <div class="home" id="home">
+
+<!-- ---------------------- video --------------------------- -->
+<video autoplay muted loop id="movie">
+        <source src="img/movie.mp4" type="video/mp4">
+    </video>
+<!-- ---------------------- video end --------------------------- -->
+
+        <h1 class="abouttext">
+            About Marketa's Bed and Breakfast</h1>
+        <div class="wrapper">
+            <!--<img src="images/tracy.jpg">-->
+            <!-- <div class="intro">
+                <p>
+                    As written up in Country Pleasures Magazine By Mary Mendoza
+                </p><br>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="About"></div>
+    
+    <div class="contact-us" id="contact-us">
+
+        
+        <div class="wrapper">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>239 Superior St</li>
+                <li>Victoria V8V 1T3</li>
+                <li>BC, CANADA</li>
+                <li>Email: info@marketas.com</li>
+                <li>Tel: +1 (250)-384-9844</li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <!--<img id="google" src="images/map.png">-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.88276448292!2d-123.378215!3d48.42039499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f74980211a177%3A0x9bda3407fbb2621!2sMarketa's+Bed+and+Breakfast!5e0!3m2!1sen!2sca!4v1433450273787" width="600" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <div class="copyright">
+            &copy; 2019, Created by Yuki Nagano.
+        </div>
+        
+        <div class="uparrow">
+            <a href="index.html" title="Go to the top of the Page">&and;</a>
+        </div>
+    </div>
+
+</body>
+</html>

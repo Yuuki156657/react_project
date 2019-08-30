@@ -1,0 +1,121 @@
+* {
+  font-family: 'PT Serif', serif;
+}
+
+body {
+  margin: 0px !important;
+  width:100% !important;
+}
+html,body{
+  scroll-behavior: smooth;
+}
+#first {
+  background: url("hot-air-ballons-828967_1920.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 1200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color:#EFDFDF;
+}
+#second {
+  background: url("ancient-1226277_1920.jpg") center;
+  background-color: lightgray;
+  background-size: cover;
+  width: 100%;
+  height: 1200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#third {
+  background: url("venue-2986721_1920.jpg");
+  background-color:#C5FFFD;
+  background-size: cover;
+  width: 100%;
+  height: 1200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#fourth {
+  background: url("20190401_192752-EFFECTS.jpg") center;
+  background-color:#C5FFFD;
+  background-size: cover;
+  width: 100%;
+  height: 720px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.menu {
+  font-family:'Dancing Script', cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 300px;
+  height: 30px;
+  position: fixed;
+  text-align: end;
+  top: 20%;
+  right: 10px;
+  z-index: 2000;
+  font-size: 4rem;
+  
+}
+
+a,
+li {
+  display: inline;
+  text-decoration: none;
+  color: gold;
+}
+/* li {
+  margin-right: 20px;
+} */
+.menu-list{
+  transition: 150ms;
+}
+.menu-list:hover{
+  color: pink;
+  font-size: 5rem;
+}
+
+.head{
+  color: blue;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  }
+  
+  .text{
+  /* text-align: center; */
+  font-size: 25px;
+  /* color: rgb(243, 143, 103); */
+  font-family: 'EB Garamond', serif;
+  }
+
+  .uparrow {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    width: 50px;
+    background-color: #3A3E3E;
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+    z-index: 10;
+}
+
+.uparrow a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin: auto;
+    line-height: 40px; 
+}
+
+.uparrow:hover a {    
+    background-color: rgb(83, 83, 179);
+    color: white;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <title>Document</title>
+
+    <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="./js/main.js"></script>   
+
+    <style>
+    /* Nav */
+        * {
+            /* border: red solid .1px; */
+        }
+
+        body {
+            margin: 0;
+
+            /* side */
+            transition: margin-left 0.5s;
+        }
+        .nav {
+            /* position: fixed; */
+            overflow: hidden;
+            background-image: linear-gradient(260deg, #f503e1 0%, #019aff 100%);
+        }
+        .nav a {
+            color: white; 
+            text-decoration: none;
+            float: left;
+            display: block;
+            padding: 15px;
+        }
+        .nav :hover{
+            color: black;
+        }
+
+        /* humberger */
+        .nav .icon{
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .nav a:not(:first-child){
+                display: none;
+            }
+            .nav a.icon{
+                float: right;
+                display: block;
+            }
+            .nav.responsive{position: relative}
+            .nav.responsive .icon{position: absolute; right:0; top:0;}
+            .nav.responsive a{float: none; display: block;}
+        }
+
+        /* services */
+        .sidenav{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow: hidden;
+            transition: 0.5s;
+            padding-top: 50px;
+            color: white;
+
+        }
+        .sidenav p{
+            color: rgb(0, 238, 255);
+            padding: 5px;
+        }
+
+        .sidenav a{
+            color: white;
+            transition: 1s;
+            display: block;
+            margin: 10px;
+            padding: 10px;
+        }
+        .sidenav .close {
+            position: absolute;
+            font-size: 15px;
+            top: 0;
+            right: 5px;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+    /* jQuery */
+        .page-main {
+            position: relative;
+        }
+
+        .page-main > div {
+            padding: 10px 0 100px;
+        }
+
+        .page-main > div h2 {
+            color: #fff;
+            text-align: center;
+            margin: 0 0 50px;
+            font-weight: normal;
+            letter-spacing: 0.15em;
+        }
+
+/* #buttons1 {
+    background-color: #ebc000;
+} */
+
+        #buttons1 .inner {
+            position: absolute;
+            width: 976px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        #buttons1 button {
+            display: block;
+            float: left;
+            width: 224px;
+            height: 80px;
+            margin: 0 10px 20px;
+            padding: 0;
+            font-size: 26px;
+            letter-spacing: 0.15em;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            /* border-radius: 20px; */
+        }
+
+        /* portfolio */
+
+        .btn{
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #019aff;
+            color: white;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #f503e1;
+            color: #000;
+        }
+
+        #mainpf{
+            padding-left: 5%;
+        }
+
+        .Project1, .Project2, .Project3{
+            float: left;
+            /* display: inline-block; */
+            width: 25%;
+            background-color: #9ed4f8;
+            padding: 20px;
+            margin: 3% 0.5%;
+            text-align: center;
+            left: 50px;
+        }
+
+        .pic {
+            height: auto;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="bodydiv">
+    <!-- Nav -->
+    <div class="nav" id="navid">
+        <a href="0709_final.html"><span class="fas fa-home"></span> Home</a>
+        <a href="#" onclick="openside()"><span class="fas fa-search"></span> Services</a>
+        <a href="signup.html" target="_blank"> Signup</a>
+
+        <!-- humberger -->
+        <a href="#" class="icon" onclick="opennav()"><span class="fas fa-bars"></span></a>
+    </div>
+</div>
+
+    <!-- services -->
+    <div class="sidenav" id="sidenavid">
+        <a href="#" class="close" onclick="closeside()">X</a>
+    
+        <p>Yuuki's portfolio</p>
+        <a href="../../web2_mid_project/res/web-mid-project/html/index.html" target="_blank" >Project1</a>
+        <a href="../../web2_mid_project/res/web-final-project/index.html" target="_blank" >Project2</a>
+        <a href="../../web2_mid_project/index1.html" target="_blank" >Project3</a>
+    </div>
+
+    <div class="page-main" role="main">
+
+            <div id="buttons1">
+                <!-- <h2>BUTTONS1</h2> -->
+                <div class="inner clearfix">
+                    <button>Yuuki's portfolio</button>
+                </div>
+            </div>
+        
+        </div>
+
+    <!-- portfolio -->
+    <div id="portfolio" style="padding:5px 50px 0 50px; overflow:hidden;">
+        <!-- <h1>Yuuki's portfolio</h1> -->
+        <div>
+            <button class="btn" onclick="filter('all')">All projects</button>
+            <button class="btn" onclick="filter('Project1')">Project1</button>
+            <button class="btn" onclick="filter('Project2')">Project2</button>
+            <button class="btn" onclick="filter('Project3')">Project3</button>
+        </div>
+        <div id="mainpf">
+            <div class="Project1">
+                <a href="../../web2_mid_project/res/web-mid-project/html/index.html" target="_blank">
+                    <img  src="pf1.png" class="pic">
+                </a>
+                <h4>Project1</h4>
+                <p>Something explain about Project1</p>
+            </div>
+            <div class="Project2">
+                <a href="../../web2_mid_project/res/web-final-project/index.html" target="_blank">
+                    <img src="pf2.png" class="pic">
+                </a>
+                <h4>Project2</h4>
+                <p>Something explain about Project2</p>
+            </div>
+            <div class="Project3">
+                <a href="../../web2_mid_project/index1.html" target="_blank">
+                    <img src="pf3.png" class="pic">
+                </a>
+                <h4>Project3</h4>
+                <p>Something explain about Project3</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Event -->
+    
+    <script>
+    // Nav
+    // humberger
+    function opennav(){
+        var x = document.getElementById('navid');
+        if (x.className==='nav'){
+            x.className+=' responsive'
+        }else{x.className='nav'}
+    }
+
+    // services
+    function openside(){
+        document.getElementById('sidenavid').style.width="150px";
+        document.body.style.marginLeft="150px";
+    }
+    function closeside(){
+        document.getElementById('sidenavid').style.width="0";
+        document.body.style.marginLeft="0";
+    }
+
+    // Portfolio
+    function filter(sel){
+        console.log(sel);
+        if(sel==='all'){
+            var A = document.getElementById('mainpf');
+            var a = A.getElementsByTagName('div');
+            for (let index = 0; index < a.length; index++){
+                const element = a[index];
+                element.style.display='block';
+                element.style.width='25%';
+                console.log(element);
+            }
+            
+        }else{
+            var A = document.getElementById('mainpf');
+            var a = A.getElementsByTagName('div');
+            for (let index = 0; index < a.length; index++){
+                const element = a[index];
+                element.style.display='none';
+                console.log(element);
+            }
+            var b = document.getElementsByClassName(sel);
+            for (let index = 0; index < b.length; index++){
+                const element = b[index];
+                element.style.display='block';
+                element.style.width='auto';
+                console.log(element);
+        }
+    }
+}
+
+    </script>
+    
+</body>
+</html>

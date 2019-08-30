@@ -1,0 +1,68 @@
+* {
+    font-family: 'PT Serif', serif;
+  }
+#training{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FFFFF3;
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#p2{
+    text-align: justify;
+}
+.head{
+    text-align: center;
+    color: chocolate;
+}
+#content_t{
+    margin-left:50px;
+    display:flex;
+
+}
+#content_t2{
+    margin-left:50px;
+    display:flex; 
+}
+/* #content_t2{
+    display:flex;
+} */
+#photo1{
+    margin-left: 815px;
+    padding:5px;
+}
+#photo2{
+    margin-left: 815px;
+    padding:5px;
+    /* float: right;
+   */
+} 
+#fst_text{
+    max-width: 700px;
+    height: 450px;
+    padding:5px;
+    float: right;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    overflow: hidden;
+    position: absolute;
+    text-align: justify;
+}
+
+#sec_text{
+    max-width: 700px;
+    padding:5px;
+    float: right;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    overflow: hidden;
+    position: absolute;
+    height: 448px;
+}
