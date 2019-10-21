@@ -11,7 +11,7 @@ export default class Home extends React.Component {
 
                 <div className="home1">
                     <h1 className="home1-p1">Hello, I'm Yuuki</h1>
-                    <h3 className="home1-p2">I'm studying web development.<br />I would like to be a web front end developer.</h3>
+                    <h3 className="home1-p2">I studied web development.<br />I would like to be a web front end developer.</h3>
 
                     <a href="https://www.facebook.com/profile.php?id=100004352167032" target="_blank">
                     <span　className="fab fa-facebook-square fa-2x fb" id="fb" />

@@ -9,8 +9,8 @@ export default class Footer extends React.Component{
             <section id="footer" className="footer">
             <div className="footer1">
                 <h1>YUUKI.N</h1>
-                <p>Adress: 1205 Howe St. Vancouver, BC V6Z 0B2  / 
-                Contact: 1(778)697-4814, tawapeee16@gmail.com</p>
+                <p>Adress: Vancouver, BC  / 
+                Mobile: 1(778)697-4814 / Email: tawapeee16@gmail.com</p>
             </div>
 
             <div className="footer-sns">
@@ -29,7 +29,7 @@ export default class Footer extends React.Component{
             </a>
             </div>
 
-            <div className="footer-content">
+            {/* <div className="footer-content">
                 <ul>
                 <li>
                     <a href="#header" className="menu-item-s">HOME</a>
@@ -39,7 +39,7 @@ export default class Footer extends React.Component{
                     <a href="#contact" className="menu-item-s">CONTACT</a>
                 </li>
                 </ul>
-            </div>
+            </div> */}
             </section>
         )
     }

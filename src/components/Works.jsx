@@ -11,7 +11,7 @@ export default class Works extends React.Component{
             <div className="works1">
                 <h1>My <span>Work Experience</span></h1>
                 <p>I have experience working as an electrical engineer in Japan for more than five years.<br />
-                I was not only in charge of designing electrical circuit but I also used to manage some small projects.</p>
+                I was not only in charge of designing electrical circuit but I also used to manage lots of projects.</p>
             </div>
 
             <div className="works1-2">

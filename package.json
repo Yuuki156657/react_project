@@ -2,7 +2,7 @@
   "name": "react_final",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Yuuki156657/react_project",
+  "homepage": "https://yuuki156657.github.io/react_project/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",

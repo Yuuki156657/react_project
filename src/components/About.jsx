@@ -49,7 +49,7 @@ export default class About extends React.Component{
                 </div>
 
                 <div className="about-text">
-                <p className="about-p1">I would like to be a web front end developer.<br />And, I have experience working as an electrical engineer in Japan for more than five years.<br />I was not only in charge of designing electrical circuit but I also used to manage some small projects. </p>
+                <p className="about-p1">I would like to be a web front end developer.<br />And, I have experience working as an electrical engineer in Japan for more than five years.<br />I was not only in charge of designing electrical circuit but I also used to manage lots of projects. </p>
             </div>
             </div>
             </div>

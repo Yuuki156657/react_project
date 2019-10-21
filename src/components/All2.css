@@ -494,7 +494,7 @@
     }
     
     .works2-2{
-        background-color: white;
+        background-color: black;
         height: 365px;
         width: 280px;
         margin: 10px 15px 15px 15px;
@@ -504,7 +504,8 @@
         float: left;
         transition: 0.5s;
         box-shadow: 4px 4px 10px 3px lightgray;
-    
+        color: white;
+
     }
     
     .works2-3{
@@ -522,7 +523,7 @@
     }
     
     .works2-4{
-        background-color: white;
+        background-color: black;
         height: 365px;
         width: 280px;
         margin: 20px 15px 15px 15px;
@@ -532,7 +533,8 @@
         float: left;
         transition: 0.5s;
         box-shadow: 4px 4px 10px 3px lightgray;
-    
+        color: white;
+
     }
     
     .works2-1:hover, .works2-2:hover, .works2-3:hover, .works2-4:hover{
@@ -557,7 +559,7 @@
         background-color: white;
         height: 420px;
         width: auto;
-        padding: 100px 20px 20px 20px;
+        padding: 100px 20px 74px 20px;
     }
     
     .contact1{
@@ -631,7 +633,7 @@
     /* Footer----------------------------------------------- */
     .footer{
         background-color: #1a1a1a;
-        height: 194px;
+        height: 140px;
         width: auto;
         padding: 20px;
     }
