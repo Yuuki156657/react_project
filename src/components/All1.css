@@ -1,4 +1,4 @@
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1011px) {
 
 *{
     list-style: none;
@@ -21,7 +21,7 @@
 .header-menu{
     position: fixed;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.8;
     height: 60px;
     width: 100%;
     z-index: 1;
@@ -345,13 +345,14 @@ progress{
 }
 
 .portfolios2 label {
+    margin: 0 none;
     padding: 0 10px;
     font-size: 20px;
 }
 
 label{
     cursor: pointer;
-    padding:5px;
+    padding: 5px;
     margin: 0;
 }
 
@@ -372,7 +373,7 @@ label{
 .check_box2:checked + .label {
     border-bottom: solid 3px red;
     color: red;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .check_box2:checked ~ div > .b {
     display: none;
@@ -387,7 +388,7 @@ label{
 .check_box3:checked + .label {
     border-bottom: solid 3px red;
     color: red;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .check_box3:checked ~ div > .a {
     display: none;
@@ -401,7 +402,7 @@ label{
 .check_box4:checked + .label {
     border-bottom: solid 3px red;
     color: red;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .check_box4:checked ~ div > .a {
     display: none;
@@ -503,7 +504,7 @@ label{
 }
 
 .works2-2{
-    background-color: black;
+    background-color: rgb(107, 107, 107);
     height: 365px;
     width: 280px;
     margin: 10px 15px 15px 15px;
@@ -531,7 +532,7 @@ label{
 }
 
 .works2-4{
-    background-color: black;
+    background-color: rgb(107, 107, 107);
     height: 365px;
     width: 280px;
     margin: 10px 15px 15px 15px;
